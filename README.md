@@ -1,27 +1,31 @@
 # Sales Analytics & Demand Forecasting for Dairy Products
 
-An end-to-end portfolio project demonstrating **Python, SQL, Power BI and Machine Learning** on a realistic dairy retail sales dataset.
+**Tools:** Python, SQL, Power BI, Microsoft Excel, Pandas, Scikit-learn
 
-## Business Problem
+## Project Objectives
 
-Dairy retailers need to balance product availability with inventory cost. This project analyzes historical sales to identify revenue and profit drivers, seasonal demand patterns, and product-level performance, then builds demand forecasting models to support inventory planning.
+- Analysed a large-scale dairy sales dataset to identify sales trends, inventory patterns, and pricing strategies.
+- Performed data cleaning, preprocessing, and exploratory data analysis (EDA) using Python and SQL.
+- Built predictive models including **Linear Regression, Decision Tree, Support Vector Machine (SVM), and Neural Network** to support demand forecasting and inventory optimization.
+- Designed an interactive Power BI dashboard to visualize sales performance and key business metrics.
 
-## Objectives
+## Analysis Areas
 
-- Clean and validate 50,000 sales records
-- Perform exploratory data analysis (EDA)
-- Analyze revenue, profit, products, regions and channels
-- Identify seasonal demand patterns
-- Build and compare Linear Regression and Decision Tree forecasting models
-- Produce a Power BI-ready analytical dataset
-- Translate findings into practical business recommendations
+- Sales trends and seasonality
+- Inventory and demand patterns
+- Product and category performance
+- Regional and channel performance
+- Pricing and discount strategy
+- Revenue and profit KPIs
 
-## Tech Stack
+## Machine Learning
 
-- **Python:** Pandas, NumPy, Matplotlib, Scikit-learn
-- **SQL:** Aggregations, CTEs, window functions and KPI analysis
-- **Power BI:** KPI cards, trend analysis, product/category performance and regional analysis
-- **Excel:** Data validation and ad-hoc analysis
+Four regression approaches are compared using MAE, RMSE and R²:
+
+1. Linear Regression
+2. Decision Tree Regressor
+3. Support Vector Machine (SVM)
+4. Neural Network
 
 ## Project Structure
 
@@ -44,44 +48,11 @@ Sales-Analytics-Demand-Forecasting/
 
 ## Dataset
 
-The dataset contains 50,000 realistic transactional observations covering 2023–2025. Fields include date, product, category, region, sales channel, unit price, units sold, discount, revenue and profit.
-
-## Analysis Questions
-
-1. Which products and categories generate the most revenue and profit?
-2. Which regions and channels have the strongest performance?
-3. How does demand change over time and across seasons?
-4. Which products should receive higher inventory priority?
-5. Which forecasting model provides the strongest demand prediction?
-
-## Machine Learning
-
-Two baseline regression models are evaluated:
-
-- Linear Regression
-- Decision Tree Regressor
-
-Evaluation metrics:
-
-- MAE
-- RMSE
-- R²
+The project uses 50,000 realistic dairy sales transactions covering 2023–2025. Variables include date, product, category, region, sales channel, customer type, unit price, units sold, discount, revenue and profit.
 
 ## Power BI Dashboard
 
-The Power BI-ready dataset supports:
-
-- Total Revenue
-- Total Profit
-- Units Sold
-- Average Transaction Value
-- Monthly Revenue Trend
-- Product and Category Performance
-- Regional Performance
-- Channel Performance
-- Discount vs Profit analysis
-
-A dashboard specification is included in `dashboard/powerbi_dashboard_spec.md` so the report can be reproduced directly in Power BI.
+The dashboard is designed around sales performance and business KPIs, including revenue, profit, units sold, product/category performance, regional trends, pricing and discount analysis, and demand/inventory insights.
 
 ## How to Run
 
@@ -89,10 +60,6 @@ A dashboard specification is included in `dashboard/powerbi_dashboard_spec.md` s
 pip install -r requirements.txt
 jupyter notebook notebooks/sales_demand_forecasting.ipynb
 ```
-
-## Key Skills Demonstrated
-
-Data cleaning, EDA, feature engineering, KPI development, SQL analytics, regression modelling, model evaluation, business interpretation and dashboard preparation.
 
 ## Author
 
