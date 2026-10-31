@@ -1,35 +1,9 @@
-# Power BI report build notes
+# Power BI build guide
 
-## Source
-Import `data/powerbi_ready_sales.csv`. Run the two scripts in `data/` first to regenerate the source and reporting files.
+Import `data/powerbi_ready_sales.csv`. Follow the Power Query steps and DAX measures in `powerbi/`. The data model, report pages, filters and reconciliation checks are documented in `powerbi/README.md`.
 
-## Report pages
+Use the supplied Revenue, Cost and Profit fields. Do not calculate profit using a fixed margin. Create a marked Date table related to Sales[Date] for monthly comparisons.
 
-### Sales overview
-- Revenue, profit, units sold and transaction count
-- Monthly revenue and profit trend
-- Revenue and profit by category
+The report should contain Overview, Product, Region & Channel, and Pricing pages. Reconcile headline totals against the imported CSV before publishing.
 
-### Product performance
-- Product revenue and profit ranking
-- Units sold by product
-- Profit margin by product
-
-### Region and channel
-- Revenue, profit and units sold by region
-- Revenue and profit by channel
-- Transaction count by channel
-
-### Pricing
-- Revenue and profit by discount band
-- Unit price and units sold by product
-- Profit margin by product and category
-
-## Filters
-Date, product, category, region, channel and customer type.
-
-## Measures
-Use the supplied Revenue, Cost and Profit columns. Calculate profit margin as total profit divided by total revenue; do not average row-level percentages for an overall margin.
-
-## Notes
-The data is generated for this portfolio project. It is suitable for demonstrating analysis and report design, not for making claims about a real dairy business.
+A native Power BI `.pbix` file is not included; this repository provides the import query, measures and build instructions.
