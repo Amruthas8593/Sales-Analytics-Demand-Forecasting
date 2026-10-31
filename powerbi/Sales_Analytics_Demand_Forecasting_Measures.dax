@@ -1,0 +1,15 @@
+// Create these measures in the Sales table. Rename the table if your import uses a different name.
+Total Revenue = SUM(Sales[Revenue])
+Total Profit = SUM(Sales[Profit])
+Total Cost = SUM(Sales[Cost])
+Units Sold = SUM(Sales[Units_Sold])
+Transactions = COUNTROWS(Sales)
+Average Selling Price = DIVIDE([Total Revenue], [Units Sold])
+Profit Margin % = DIVIDE([Total Profit], [Total Revenue])
+Average Discount % = AVERAGE(Sales[Discount_Pct])
+
+// Add a marked Date table related to Sales[Date] before using time intelligence.
+Revenue Previous Month = CALCULATE([Total Revenue], DATEADD('Date'[Date], -1, MONTH))
+Revenue MoM Change % = DIVIDE([Total Revenue] - [Revenue Previous Month], [Revenue Previous Month])
+Profit Previous Month = CALCULATE([Total Profit], DATEADD('Date'[Date], -1, MONTH))
+Profit MoM Change % = DIVIDE([Total Profit] - [Profit Previous Month], [Profit Previous Month])
